@@ -108,6 +108,12 @@ function clear() {
   $("#drinkResults").empty();
 }
 
+$("#newMix").on("click", function() {
+  event.preventDefault();
+  optionPage.style.display = "block";
+  resultsPage.style.display = "none";
+})
+
 //Pages
 agePage = document.getElementById("legal");
 optionPage = document.getElementById("mixForm");

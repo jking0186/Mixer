@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background-image: url(../images/purple-drip-png-3-transparent.png);
     background-repeat: no-repeat;
     height: 100px;
@@ -14,7 +14,7 @@ body {
     color: #fefefe;
     margin: auto;
     padding: 40px;
-}
+} */
 
 h1 {
     font-family: 'Righteous', cursive, sans-serif, serif;
@@ -48,17 +48,25 @@ label {
     border-radius: 10px;
     box-shadow: 2px 0px #F7FFF7;
     padding: 50px 10px;
-
+    margin-bottom: 20px;
 }
 
-.cocktail-shaker-strainer {
+/* .center {
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
+    margin-right: auto; 
     width: 150px;
     position: relative;
-}
+} */
+
+/* .cocktail-shaker-strainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top: 20px;
+  width: 150px;
+  position: relative;
+} */
 
 .cocktail-shaker-strainer:hover {
     transform: rotate(-30deg);

@@ -24,7 +24,7 @@
             <!-- Legal Form -->
             <div class="grid-x grid-margin-x align-center">
                 <div class="cell" style="display: inline;">
-                    <div class="card" style="width: fit-content; height: fit-content;">
+                    <div id="legal" class="card" style="width: fit-content; height: fit-content;">
 
                         <div class="card-section">
                             <form class="21">
@@ -43,7 +43,7 @@
             </div>
         </div>
             <div class="cell" id="mixForm" style="display: none;">
-                <div class="card" style="width: fit-content; height: fit-content;">
+                <div class="card" style="width: 380px; height: 500px;">
                     <div class="card-section">
                         <form class="21">
                             <p class="text-center dropdown">Choose Your Mixx</p>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="cell" id="results" style="display: none;">
-                <div class="card" style="width: fit-content; height: fit-content;">
+                <div class="card" style="width: 380px; height: fit-content;">
                     <div class="card-section">
 
                         <p class="text-center dropdown" id="name">Your Cocktail</p>
@@ -84,20 +84,20 @@
                         <p id="cocktailRecipe"></p>
                     </div>
                 </div>
-                <hr />
-                <div class="card" style="width: fit-content; height: fit-content;">
+                <div class="card" style="width: 380px; height: fit-content;">
                     <div class="card-section">
                         <p class="text-center dropdown">Your Playlist</p>
                         <iframe id="playlist" src="" 
                         width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
                         </iframe>
+                        <button id="newMix" class="button expanded" type="submit"><i class="fas fa-sync-alt"></i>New Mix</button>
                     </div>
                 </div>
             </div>
     </div>
     <!-- Animation -->
     <div class="spacer"></div>
-    <div cell="medium-8">
+    <!-- <div cell="medium-8">
         <div class="image-holder">
             <img src="./images/cocktail-shaker-strainer.png" alt="Cocktail Shaker"
                 class="center cocktail-shaker-strainer">
@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> -->
 
    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
