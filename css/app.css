@@ -4,17 +4,17 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background-image: url(../images/purple-drip-png-3-transparent.png);
-    background-repeat: no-repeat;
-    height: 100px;
-    background-position: center;
-    background-size: cover;
-    background-color: #FFA630;
-    color: #fefefe;
-    margin: auto;
-    padding: 40px;
-} */
+body {
+  background-image: url(../images/purple-drip-png-3-transparent.png);
+  background-repeat: no-repeat;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-color: #FFA630;
+  color: #fefefe;
+  margin: auto;
+  padding: 40px;
+}
 
 h1 {
     font-family: 'Righteous', cursive, sans-serif, serif;
@@ -49,6 +49,18 @@ label {
     box-shadow: 2px 0px #F7FFF7;
     padding: 50px 10px;
     margin-bottom: 20px;
+}
+
+
+#choiceSubmit:hover {
+background-image: url('https://media.giphy.com/media/jGtlqEFofxJWo/200.gif');
+background-repeat: no-repeat;
+background-position: center;
+color: transparent;
+text-shadow: none;
+margin: 0px;
+padding: 100px;
+
 }
 
 /* .center {
@@ -130,3 +142,60 @@ label {
     background-color: #2E5077;
     color: #F7FFF7;
   }
+
+  #newMix {
+    font-family: 'Righteous', cursive, sans-serif, serif;
+    color: #2E5077;
+    text-transform: uppercase;
+    text-shadow: -1px 0 #F7FFF7, 0 1px #F7FFF7, 1px 0 #F7FFF7, 0 -1px #F7FFF7;
+    font-size: 30px;
+  }
+
+  #choiceSubmit {
+    font-family: 'Righteous', cursive, sans-serif, serif;
+    color: #2E5077;
+    text-transform: uppercase;
+    text-shadow: -1px 0 #F7FFF7, 0 1px #F7FFF7, 1px 0 #F7FFF7, 0 -1px #F7FFF7;
+    font-size: 30px;
+  }
+  
+  #ageSubmit {
+    font-family: 'Righteous', cursive, sans-serif, serif;
+    color: #2E5077;
+    text-transform: uppercase;
+    text-shadow: -1px 0 #F7FFF7, 0 1px #F7FFF7, 1px 0 #F7FFF7, 0 -1px #F7FFF7;
+    font-size: 30px;
+  }
+
+  #cocktailImg {
+    width: 500px;
+    height: auto;
+  }
+
+  #cocktailRecipe {
+    width: 500px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-right: 15px;
+
+  }
+
+  .ingredient {
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+
+  .measure {
+    font-size: 14px;
+    padding-left: 30px;
+
+
+  }
+
+  .card-section {
+    width: 500px;
+  }
+  
