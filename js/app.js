@@ -21,7 +21,7 @@ $("#choiceSubmit").on("click", function () {
 
       // Drink Img
       $("#cocktailImg").attr("src", results[num].strDrinkThumb);
-
+      $("#cocktailImg").attr("style", "max-width:500px;")
       // SECOND API
       queryURL2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkId;
       $.ajax({
