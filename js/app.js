@@ -99,7 +99,7 @@ $("#ageSubmit").on("click",
       var age = today.getFullYear() - birthDate.getFullYear();
       var message = document.getElementById("age")
       if (age < 21 || age > 100) {
-        message.innerHTML = "Sorry, You're Not Old Enough."
+        message.textContent = "Sorry, You're Not Old Enough."
       }
       else {
         optionPage.style.display = "block";
