@@ -12,7 +12,7 @@ $("#choiceSubmit").on("click", function () {
       results = response.drinks;
 
       //Math random for random drink to be displayed
-      var num = Math.floor(Math.random() * results.length); 
+      var num = Math.floor(Math.random() * results.length);
       // Store drink for second api
       var drinkId = results[num].idDrink;
 
@@ -86,15 +86,30 @@ $("#choiceSubmit").on("click", function () {
           $("#cocktailRecipe").append(instruction)
         });
     });
-
-
 });
+
 // PAGE ONE
-$("#ageSubmit").on("click", function drink() {
-  event.preventDefault();
-  optionPage.style.display = "block";
-  agePage.style.display = "none";
-})
+$("#ageSubmit").on("click",
+  function getAge() {
+    event.preventDefault();
+    var dateString = document.getElementById("start").value;
+    if (dateString != "") {
+      var today = new Date();
+      var birthDate = new Date(dateString); //format is mm.dd.yyyy
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var message = document.getElementById("age")
+      if (age < 21 || age > 100) {
+        message.innerHTML = "Sorry, You're Not Old Enough."
+      }
+      else {
+        optionPage.style.display = "block";
+        agePage.style.display = "none";
+      }
+    }
+    else {
+      alert("please provide your date of birth");
+    }
+  })
 
 //SELECT PAGE
 $("#choiceSubmit").on("click", function choice() {
@@ -105,11 +120,12 @@ $("#choiceSubmit").on("click", function choice() {
 
 function clear() {
   $("#display").empty();
-  $("#drinkResults").empty();
+  $("#cocktailRecipe").empty();
 }
-
-$("#newMix").on("click", function() {
+//Return to drink and song select
+$("#newMix").on("click", function () {
   event.preventDefault();
+  clear();
   optionPage.style.display = "block";
   resultsPage.style.display = "none";
 })
@@ -119,58 +135,31 @@ agePage = document.getElementById("legal");
 optionPage = document.getElementById("mixForm");
 resultsPage = document.getElementById("results");
 
-//Age Restriction 
-// function getAge() 
-// {
-//     var dateString = document.getElementById("start").value;
-//     if(dateString !="")
-//     {
-//         var today = new Date();
-//         var birthDate = new Date(dateString); //format is mm.dd.yyyy
-//         var age = today.getFullYear() - birthDate.getFullYear();
-
-//         if(age < 21 || age > 100)
-//         {
-//             alert("Age "+age+" is restrict");
-//         } 
-//         else 
-//         {
-//             alert("Age "+age+" is allowed");
-//         }
-//     } 
-//     else 
-//     {
-//         alert("please provide your date of birth");
-//     }}
+  // Playlist search by choice
 
 
+  $("#choiceSubmit").on("click", function () {
+    event.preventDefault();
+    var song = $('#musicOptions').find(":selected").text();
+    console.log(song);
 
 
-// Playlist search by choice
-
-
-$("#choiceSubmit").on("click", function () {
-  event.preventDefault();
-  var song = $('#musicOptions').find(":selected").text();
-  console.log(song);
-
-
-  if (song === 'Top 50') {
-    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" )
-  }
-    
-    else if (song ===  'Hot Country'){
-    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda" )
-  }
-
-    else if (song ===  "All Out 00's" ){
-    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd" )
-  }
-
-    else if (song ===  'Lorem' ){
-    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DXdwmD5Q7Gxah" )
+    if (song === 'Top 50') {
+      $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp")
     }
-})
+
+    else if (song === 'Hot Country') {
+      $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda")
+    }
+
+    else if (song === "All Out 00's") {
+      $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd")
+    }
+
+    else if (song === 'Lorem') {
+      $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DXdwmD5Q7Gxah")
+    }
+  })
 
 
 // Search for artist my car
