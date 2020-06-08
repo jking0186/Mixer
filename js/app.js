@@ -119,3 +119,116 @@ agePage = document.getElementById("legal");
 optionPage = document.getElementById("mixForm");
 resultsPage = document.getElementById("results");
 
+//Age Restriction 
+// function getAge() 
+// {
+//     var dateString = document.getElementById("start").value;
+//     if(dateString !="")
+//     {
+//         var today = new Date();
+//         var birthDate = new Date(dateString); //format is mm.dd.yyyy
+//         var age = today.getFullYear() - birthDate.getFullYear();
+
+//         if(age < 21 || age > 100)
+//         {
+//             alert("Age "+age+" is restrict");
+//         } 
+//         else 
+//         {
+//             alert("Age "+age+" is allowed");
+//         }
+//     } 
+//     else 
+//     {
+//         alert("please provide your date of birth");
+//     }}
+
+
+
+
+// Playlist search by choice
+
+
+$("#choiceSubmit").on("click", function () {
+  event.preventDefault();
+  var song = $('#musicOptions').find(":selected").text();
+  console.log(song);
+
+
+  if (song === 'Top 50') {
+    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" )
+  }
+    
+    else if (song ===  'Hot Country'){
+    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX1lVhptIYRda" )
+  }
+
+    else if (song ===  "All Out 00's" ){
+    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd" )
+  }
+
+    else if (song ===  'Lorem' ){
+    $("#playlist").attr("src", "https://open.spotify.com/embed/playlist/37i9dQZF1DXdwmD5Q7Gxah" )
+    }
+})
+
+
+// Search for artist my car
+
+
+// var templateSource = document.getElementById('results-template').innerHTML,
+//     template = Handlebars.compile(templateSource),
+//     resultsPlaceholder = document.getElementById('results'),
+//     playingCssClass = 'playing',
+//     audioObject = null;
+
+// var fetchTracks = function (albumId, callback) {
+//     $.ajax({
+//         url: 'https://api.spotify.com/v1/albums/' + albumId,
+//         success: function (response) {
+//             callback(response);
+//         }
+//     });
+// };
+
+// var searchAlbums = function (query) {
+//     $.ajax({
+//         url: 'https://api.spotify.com/v1/search',
+//         data: {
+//             q: query,
+//             type: 'album'
+//         },
+//         success: function (response) {
+//             resultsPlaceholder.innerHTML = template(response);
+//         }
+//     });
+// };
+
+// results.addEventListener('click', function (e) {
+//     var target = e.target;
+//     if (target !== null && target.classList.contains('cover')) {
+//         if (target.classList.contains(playingCssClass)) {
+//             audioObject.pause();
+//         } else {
+//             if (audioObject) {
+//                 audioObject.pause();
+//             }
+//             fetchTracks(target.getAttribute('data-album-id'), function (data) {
+//                 audioObject = new Audio(data.tracks.items[0].preview_url);
+//                 audioObject.play();
+//                 target.classList.add(playingCssClass);
+//                 audioObject.addEventListener('ended', function () {
+//                     target.classList.remove(playingCssClass);
+//                 });
+//                 audioObject.addEventListener('pause', function () {
+//                     target.classList.remove(playingCssClass);
+//                 });
+//             });
+//         }
+//     }
+// });
+
+// document.getElementById('search-form').addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     searchAlbums(document.getElementById('query').value);
+// }, false);
