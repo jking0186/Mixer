@@ -102,7 +102,7 @@ $("#ageSubmit").on("click",
         message.textContent = "Sorry, You're Not Old Enough."
       }
       else {
-        optionPage.style.display = "block";
+        optionPage.style.display = "inline";
         agePage.style.display = "none";
       }
     }
@@ -115,7 +115,7 @@ $("#ageSubmit").on("click",
 $("#choiceSubmit").on("click", function choice() {
   event.preventDefault();
   optionPage.style.display = "none";
-  resultsPage.style.display = "block";
+  resultsPage.style.display = "inline";
 })
 
 function clear() {
@@ -126,7 +126,7 @@ function clear() {
 $("#newMix").on("click", function () {
   event.preventDefault();
   clear();
-  optionPage.style.display = "block";
+  optionPage.style.display = "inline";
   resultsPage.style.display = "none";
 })
 

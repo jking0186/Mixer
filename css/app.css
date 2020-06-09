@@ -19,11 +19,11 @@ body {
 h1 {
     font-family: 'Righteous', cursive, sans-serif, serif;
     text-shadow: -1px 0 #F7FFF7, 0 1px #F7FFF7, 1px 0 #F7FFF7, 0 -1px #F7FFF7;
-    font-size: 80px;
+    font-size: 70px;
     text-transform: uppercase;
-    padding: 0px 0px 20px 0px;
     color: #2E5077;
     padding: 20px;
+    line-height: 50px;
 }
 
 
@@ -63,46 +63,6 @@ padding: 100px;
 
 }
 
-/* .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 150px;
-    position: relative;
-} */
-
-/* .cocktail-shaker-strainer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
-  padding-top: 20px;
-  width: 150px;
-  position: relative;
-} */
-
-.cocktail-shaker-strainer:hover {
-    transform: rotate(-30deg);
-    transition: all .03s;
-  }
-
-  .mixx-it {
-    font-family: 'Righteous', cursive, sans-serif, serif;
-    position: relative;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-    bottom: 70px;
-    width: 100%;
-    color: #2E5077;
-    text-transform: uppercase;
-    text-shadow: -1px 0 #F7FFF7, 0 1px #F7FFF7, 1px 0 #F7FFF7, 0 -1px #F7FFF7;
-
-  }
-
-  .mixx-it:hover {
-    transform: rotate(30deg);
-    transition: all .03s;
-  }
 
   .legal-question {
     font-family: sans-serif;
@@ -127,10 +87,6 @@ padding: 100px;
   }
 
 
-  .image-holder {
-      padding: 20px;
-  }
-
   .dropdown {
     font-family: sans-serif;
     text-align: center;
@@ -141,6 +97,10 @@ padding: 100px;
     padding: 30px;
     background-color: #2E5077;
     color: #F7FFF7;
+  }
+
+  #mixForm {
+    align-items: center;
   }
 
   #newMix {
@@ -168,12 +128,12 @@ padding: 100px;
   }
 
   #cocktailImg {
-    width: 500px;
+    width: 100%;
     height: auto;
+    align-items: center;
   }
 
   #cocktailRecipe {
-    width: 500px;
     font-family: sans-serif;
     padding-top: 30px;
     padding-right: 15px;
@@ -195,7 +155,5 @@ padding: 100px;
 
   }
 
-  .card-section {
-    width: 500px;
-  }
+
   
