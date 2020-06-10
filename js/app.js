@@ -115,7 +115,7 @@ $("#ageSubmit").on("click",
 $("#choiceSubmit").on("click", function choice() {
   event.preventDefault();
   optionPage.style.display = "none";
-  resultsPage.style.display = "inline";
+  resultsPage.style.display = "flex";
 })
 
 function clear() {
@@ -141,7 +141,6 @@ resultsPage = document.getElementById("results");
   $("#choiceSubmit").on("click", function () {
     event.preventDefault();
     var song = $('#musicOptions').find(":selected").text();
-    console.log(song);
 
 
     if (song === 'Top 50') {
